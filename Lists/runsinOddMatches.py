@@ -10,9 +10,10 @@ input_runs = [62, 85, 74, 10, 12, 101, 122, 99, 81, 55]
 
 # i = 0
 oddMatchList=[]
-for i in range(0, len(input_runs), 2):
-    # print(i, input_runs[i])
-    oddMatchList.append(input_runs[i])
+# for i in range(0, len(input_runs), 2):
+#     # print(i, input_runs[i])
+#     oddMatchList.append(input_runs[i])
 
-for each in oddMatchList:
-    print(each, end = ' ')
+print(input_runs[::2])
+# for each in oddMatchList:
+#     print(each, end = ' ')

@@ -7,17 +7,16 @@ Expected_Output = [101, 122, 99, 81, 55]'''
 
 
 input_runs = [62, 85, 74, 10, 12, 101, 122, 99, 81, 55]
-# size = len(input_runs)
-last5Matches = []
-# for i in range(-1, -6, -1):
-#     print(i, input_runs[i])
-#     last5Matches.append(input_runs[i])
-j = -5
+
+LastMatches = int(input("Enter the last no of matches you want to process: "))
+backCount = 0-LastMatches
+
+lastMatchesList = []
+j = backCount
 while j <= -1:
-    # print(input_runs[j])
-    last5Matches.append(input_runs[j])
+    lastMatchesList.append(input_runs[j])
     j+=1
 
-for each in last5Matches:
+for each in lastMatchesList:
     print(each, end = ' ')
 
