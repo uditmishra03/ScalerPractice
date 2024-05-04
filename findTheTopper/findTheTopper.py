@@ -1,4 +1,6 @@
 import pandas
+import csv
+from collections import defaultdict
 
 # class Students():
 
@@ -45,4 +47,44 @@ def get_csv_data():
 6.  compare the total marks of each student and find the maximum marks, based on the max marks, print the name of Topper.
 7.  Repeat the above process for each class. 
 '''
-get_csv_data()
+# get_csv_data()
+
+def read_csv():
+    data = []
+    with open(csv_file, 'r') as csvfile:
+        reader = csv.DictReader(csvfile)
+        # print(reader)
+        for row in reader:
+            # Assuming 'A', 'B', ..., 'F' are subject names
+            # print(row)
+            # print(row['name'])
+            # print(row['subject'])
+            # print(row['marks'])
+            # print(row['class'])
+            # subjects = dict(
+            #     zip(['Science', 'Accounts', 'Maths', 'English', 'Economics'], map(int, [row['Science'], row['Accounts'], row['Maths'], row['English'], row['Economics']])))
+            data.append({
+                "name": row["name"],
+                "id": int(row["id"]),
+                "class": int(row["class"]),
+                "marks": int(row["marks"])
+            })
+    return data
+
+data_dict = read_csv()
+# print(data_dict)
+
+student_marks = defaultdict(int)
+for student in data_dict:
+    # print(student['id']['class'])
+    # print(student)
+    student_id = student['id']
+    class_id = student['class']
+    student_name = student['name']
+    marks = student['marks']
+    student_marks[(student_id, class_id, student_name)] += marks
+
+# print(student_marks)
+# Print the sum of marks for each student of each class with unique id
+for (student_id, class_id, student_name), total_marks in student_marks.items():
+    print(f"Student ID: {student_id}, Class: {class_id}, Student Name: {student_name},  Total Marks: {total_marks}")
