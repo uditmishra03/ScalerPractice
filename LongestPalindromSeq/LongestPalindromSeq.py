@@ -46,7 +46,7 @@ Variations of Above Question:
 # reversal_string = lambda subsequence: subsequence[::-1]
 
 test_string = "LEEKEESEE"
-
+test_string = test_string.lower()
 
 def CheckPalindrome(word):
     isPalindrome = True

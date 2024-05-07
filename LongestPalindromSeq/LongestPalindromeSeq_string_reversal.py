@@ -44,6 +44,8 @@ test_string = "LEEKEESEE"
 # 2. check for palindrome for the substring.
 
 # lambda function for the reversal of string.
+test_string = test_string.lower()
+
 reversal_string = lambda word: word[::-1]
 
 max_len_LPS = 0
