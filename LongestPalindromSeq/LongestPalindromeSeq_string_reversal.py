@@ -45,18 +45,30 @@ test_string = "LEEKEESEE"
 test_string = test_string.lower()
 
 reversal_string = lambda word: word[::-1]
+# sorted_list = lambda str_list:
+# sorted_list = sorted(str_list, key=lambda x: len(x))
 
 max_len_LPS = 0
 lps = ''
-count = 0
+total_palindrome_count = 0
+palindromes = []
 # print("length of string: ", len(test_string))
 for i in range(1, len(test_string) + 1):
     for j in range(i):
         subsequence = test_string[j:i:]
         rev_subsequence = reversal_string(subsequence)
+        if subsequence == rev_subsequence and subsequence not in palindromes:
+            total_palindrome_count += 1
+            palindromes.append(subsequence)
         if subsequence == rev_subsequence and max_len_LPS < len(subsequence):
             max_len_LPS = len(subsequence)
             lps = subsequence
-        count += 1
-# print("\nTotal sequence:",count)
+
+# print(sorted_list(palindromes))
+palindromes.sort(key=lambda x: len(x))
+# print(palindromes)
 print(f"maximum length of LPS: {max_len_LPS}, and the LPS is: \"{lps}\"")
+print("\nTotal unique palindromic sequence:",total_palindrome_count)
+print("\nAll the unique palindromes found")
+for i in range(len(palindromes)):
+    print(f"{i+1}. {palindromes[i]}: {len(palindromes[i])}")
