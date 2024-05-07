@@ -36,9 +36,6 @@ Variations of Above Question:
 # test_string = 'a'
 # test_string = "abcd"
 
-# print(f"original string: {test}")
-# print(f"reversed string: {rev_test}")
-
 # 1. Create sub-string from the original string
 # 2. check for palidrome for the substring.
 
@@ -47,6 +44,7 @@ Variations of Above Question:
 
 test_string = "LEEKEESEE"
 test_string = test_string.lower()
+
 
 def CheckPalindrome(word):
     isPalindrome = True

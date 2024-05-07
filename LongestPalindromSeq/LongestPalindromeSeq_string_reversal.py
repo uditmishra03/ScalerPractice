@@ -35,8 +35,6 @@ Variations of Above Question:
 # test_string = 'a'
 # test_string = "abcd"
 
-# print(f"original string: {test}")
-# print(f"reversed string: {rev_test}")
 
 test_string = "LEEKEESEE"
 
