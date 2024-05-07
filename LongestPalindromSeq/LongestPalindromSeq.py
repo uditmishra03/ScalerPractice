@@ -30,7 +30,7 @@ Variations of Above Question:
 
 3) Return All subsequence Palindromes as List'''
 
-test_string= "LEEKEESEE"
+# test_string= "LEEKEESEE"
 # test_string= "BBABCBAB"
 # test_string = 'cbbd'
 # test_string = 'a'
@@ -41,20 +41,32 @@ test_string= "LEEKEESEE"
 
 # 1. Create sub-string from the original string
 # 2. check for palidrome for the substring.
-reversal_string = lambda subsequence: subsequence[::-1]
+
+# Lambda function to reverse the string.
+# reversal_string = lambda subsequence: subsequence[::-1]
+
+test_string = "LEEKEESEE"
+
+
+def CheckPalindrome(word):
+    isPalindrome = True
+    for i, j in zip(range(len(word)), range(len(word) - 1, -1, -1)):
+        if word[i] != word[j]:
+            isPalindrome = False
+            break
+    return isPalindrome
+
 
 max_len_LPS = 0
 lps = ''
-count =0
-print("length of string: ", len(test_string))
-for i in range(1, len(test_string)+1):
+count = 0
+# print("length of string: ", len(test_string))
+for i in range(1, len(test_string) + 1):
     for j in range(i):
         subsequence = test_string[j:i:]
-        rev_subsequence = reversal_string(subsequence)
-        if subsequence == rev_subsequence and max_len_LPS < len(subsequence):
+        if CheckPalindrome(subsequence) and max_len_LPS < len(subsequence):
             max_len_LPS = len(subsequence)
             lps = subsequence
-        # print(subsequence, rev_subsequence, sep='<-->')
-        count +=1
+        count += 1
 # print("\nTotal sequence:",count)
 print(f"maximum length of LPS: {max_len_LPS}, and the LPS is: \"{lps}\"")
