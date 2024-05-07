@@ -64,9 +64,9 @@ for i in range(1, len(test_string) + 1):
             max_len_LPS = len(subsequence)
             lps = subsequence
 
-# print(sorted_list(palindromes))
+
 palindromes.sort(key=lambda x: len(x))
-# print(palindromes)
+
 print(f"maximum length of LPS: {max_len_LPS}, and the LPS is: \"{lps}\"")
 print("\nTotal unique palindromic sequence:",total_palindrome_count)
 print("\nAll the unique palindromes found")
