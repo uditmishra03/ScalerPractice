@@ -14,3 +14,4 @@ while counter >0:
     counter -=1
 
 print(f"\nsum of first {num} is : {sum}")
+print(f"\naverage of first {num} is {sum/num}")
