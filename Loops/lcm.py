@@ -3,7 +3,7 @@ B = 4
 
 maxofTwo = max(A, B)
 # print(maxofTwo)
-while maxofTwo > 0:
+while True:
     if maxofTwo % A == 0 and maxofTwo % B == 0:
         # print(maxofTwo)
         break
