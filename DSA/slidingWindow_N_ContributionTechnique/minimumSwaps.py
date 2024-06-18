@@ -7,20 +7,21 @@ Note: It is possible to swap any two elements, not necessarily consecutive.'''
 # B = 8
 A = [5, 17, 100, 11]
 B = 20
-# print(A)
+print(A)
 lesserIndex = []
 smallerNocount =0
 for i in range (len(A)):
     if A[i] <= B:
         lesserIndex.append(i)
         smallerNocount +=1
-# print(lesserIndex, smallerNocount)
+print(lesserIndex, smallerNocount)
 
-largernoCount =0
-for i in range(0, smallerNocount):
-    # print(A[i])
-    if A[i] > B:
-        largernoCount +=1
+largernoCount = len(A) - smallerNocount
+# print(largernoCount)
+# for i in range(0, smallerNocount):
+#     print(A[i])
+#     if A[i] > B:
+#         largernoCount +=1
 
 minSwaps = largernoCount
 
