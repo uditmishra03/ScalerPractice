@@ -7,7 +7,12 @@ You need to do this in place.
 
 Note: If you end up using an additional array, you will only receive partial score.'''
 
-A = [[1, 2],[3, 4]]
+# A = [[1, 2],[3, 4]]
+A = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
 
 # print(A)
 def print2Darray(arr):
