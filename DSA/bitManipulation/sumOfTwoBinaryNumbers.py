@@ -1,9 +1,12 @@
 '''Problem Description
 Given two binary strings A and B. Return their sum (also a binary string).'''
 
-A = "1010110111001101101000"
-B = '1000011011000000111100110'
+A= '110'
+B = '11'
+# A = "1010110111001101101000"
+# B = '1000011011000000111100110'
 
+print(A, B, sep = '\n ')
 max_len = max(len(A), len(B))
 
 B = '0'*(max_len-len(B)) + B
