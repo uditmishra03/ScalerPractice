@@ -6,13 +6,13 @@ Note: It is possible to swap any two elements, not necessarily consecutive.'''
 
 
 import sys
-A = [8, 3, 10, 20, 22, 13,1,2,55, 5, 15, 50]
-B = 5
+# A = [8, 3, 10, 20, 22, 13,1,2,55, 5, 15, 50]
+# B = 5
 # A = [1, 12, 10, 3, 14, 10, 5]
 # B = 8
 
-# A = [5, 17, 100, 11]
-# B = 20
+A = [5, 17, 100, 11]
+B = 20
 
 ans = sys.maxsize
 
@@ -23,6 +23,7 @@ for element in A:
         smallNoCount +=1
 
 print('small no count: ', smallNoCount)
+
 # Badelements --> elements larger than value of B
 badElements = 0
 for i in range(smallNoCount):

@@ -15,19 +15,19 @@ for start in range(A):
     sum = 0
     for end in range(start, A):
         # sum = sum + C[end]
-        # print(f"debug @14: start: {start}, end : {end}, sum :{sum}")
+        print(f"debug @14: start: {start}, end : {end}, sum :{sum}")
 
         if sum <= B:
             sum = sum + C[end]
             ans = max(sum, B)
             #
-            # print(f"sum = {sum}, added element: {C[end]}")
+            print(f"sum = {sum}, added element: {C[end]}")
         else:
             # break
             start +=1
             sum = sum - C[start]
             ans = max(sum, B)
-            # print(f"sum = {sum}, subtracted element: {C[start]}")
+            print(f"sum = {sum}, subtracted element: {C[start]}")
 
 print(ans)
 

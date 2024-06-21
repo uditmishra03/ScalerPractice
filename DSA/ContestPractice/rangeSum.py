@@ -5,7 +5,7 @@ For each query, you have to find the sum of all elements from L to R indices in 
 More formally, find A[L] + A[L + 1] + A[L + 2] +... + A[R - 1] + A[R] for each query.'''
 
 A = [1, 2, 3, 4, 5]
-B = [[0, 3], [1, 2]]
+B = [[0, 3], [1, 2], [0, 4]]
 
 # A = [2, 2, 2]
 # B = [[0, 0], [1, 2]]
@@ -22,8 +22,10 @@ for each in B:
     # print(each)
     L, R = each[0], each[1]
     if L == 0:
+        # print(prefixsum[R], prefixsum[L - 1])
         rangesum = prefixsum[R]
     else:
+        # print(prefixsum[R], prefixsum[L - 1])
         rangesum = prefixsum[R] - prefixsum[L - 1]
     results.append(rangesum)
     print(f"for L:{L}, R:{R}, rangesum:{rangesum}")
