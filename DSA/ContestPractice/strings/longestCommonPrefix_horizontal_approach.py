@@ -6,7 +6,8 @@ The longest common prefix for a pair of strings S1 and S2 is the longest string 
 Example: the longest common prefix of "abcdefgh" and "abcefgh" is "abc".'''
 
 # A = ["abcdefgh", "aefghijk", "abcefgh"]
-A = ["abeeab", "abere", "abacd"]
+# A = ["abeeab", "abere", "abacd"]
+A = ["abab", "ab", "abcd"];
 
 def findprefix(string1, string2):
     ans = ''
@@ -17,19 +18,18 @@ def findprefix(string1, string2):
             ans += string1[i]
     return ans
 
-print(findprefix())
-
+# print(findprefix(A[0], A[1]))
 
 prefix = []
 prefix.append(A[0])
-
-print(prefix[0])
-for i in range(1, len(A)):
-    print(i, print(A[i]))
-#     prefix[i].append(findprefix(prefix[i-1], A[i]))
-
 # print(prefix)
-# print(A[0], A[1])
-# print(findprefix(A[0], A[1]))
-# # ans = findprefix(A[0], A[1])
-# print(ans)
+#
+# print(prefix[0])
+for i in range(1, len(A)):
+    # print(i, print(A[i]))
+    prefix.append(findprefix(prefix[i-1], A[i]))
+#
+# print(prefix)
+
+ans = prefix[-1]
+print('ans: ', ans)
