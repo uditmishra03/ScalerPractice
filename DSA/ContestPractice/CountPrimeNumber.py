@@ -9,6 +9,7 @@ primeNumbers = []
 if num == 1:
     primeNumbers = None
 for each in range(2, num + 1):
+    print('Checking for :', each)
     isPrime = True
     for divisors in range(2, int(math.sqrt(each)) + 1):
         if each % divisors == 0:
