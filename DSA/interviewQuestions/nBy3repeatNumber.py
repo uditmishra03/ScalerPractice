@@ -1,0 +1,81 @@
+# A = [1,2,3 ,1 ,1]
+# A=[ 1, 1, 1, 2, 3, 5, 7 ]
+
+A= [1, 2, 3]
+A.sort()
+print(A)
+element = A[0]
+# count = 1
+n = len(A)
+threshold = n//3
+print("threshold: ", threshold)
+
+element_count = dict()
+element_count[A[0]] = 1
+# print(element_count)
+for i in range(1, n):
+    if A[i] == A[i-1]:
+        element_count[A[i]] = element_count[A[i-1]] + 1
+    else:
+        element_count[A[i]] = 1
+
+print(element_count)
+keys = element_count.keys()
+values = element_count.values()
+for element, count in element_count.items():
+    if count > threshold:
+        print("Winner is: ", element)
+        break
+    else:
+        print('No winner found!')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#     if A[i] == element:
+#         count +=1
+#     else:
+#         if count > 0:
+#             count -=1
+#         else:
+#             element = A[i]
+#             count = 1
+#     if count >= threshold:
+#         element
+# print(element, count)
+#
+# # print(element)
+# # check if element is majority element.
+# count_of_element =0
+# for i in range(n):
+#     if A[i] == element:
+#         count_of_element +=1
+#
+# print(element, count_of_element, n//3)
+# if(count_of_element > n//3):
+#     print("majority element:  ", element)
+# else:
+#     print('No majority element.')
