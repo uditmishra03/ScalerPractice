@@ -20,5 +20,5 @@ def isPalindrome(str, left, right):
 # A = "namanaa"
 A= "strings"
 n = len(A)
-print(n, A[0], A[n-1])
+# print(n, A[0], A[n-1])
 print(isPalindrome(A, 0, n-1))
