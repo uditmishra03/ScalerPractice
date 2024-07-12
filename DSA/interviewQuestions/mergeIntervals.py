@@ -30,6 +30,6 @@ for i in range(0, n):
         interval[0] = min(interval[0], arr[i][0])
         interval[1] = max(interval[1], arr[i][1])
 
-ans.append(interval)
+# ans.append(interval)
 
 print(ans)
