@@ -3,9 +3,9 @@ Given an array A of length N where all the elements are distinct and are in the 
 
 Two numbers from the range [1, N+2] are missing from the array A. Find the two missing numbers.'''
 
-# A = [3, 2, 4]
+A = [3, 2, 4]
 # A = [5, 1, 3, 6]
-A= [4,5,2,9,3,7,8,11,10]
+# A= [4,5,2,9,3,7,8,11,10]
 
 def checkBit(N, i):
     if N & (1 << i) == 0:
@@ -46,6 +46,7 @@ for i in range(n):
         # XOR of second set in arr[]  
         y = y ^ A[i]   
 
+print(x,y)
 for i in range(1,max_range+1): 
     if checkBit(i, pos)== True:
         print('set', i) 

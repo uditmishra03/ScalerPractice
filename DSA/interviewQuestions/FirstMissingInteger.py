@@ -6,8 +6,8 @@ Note: Your algorithm should run in O(n) time and use constant space.
 '''
 
 # arr = [1, 2, 0]
-arr = [2,3,1,2]
-# arr = [3, 4, -1, 1]
+# arr = [2,3,1,2]
+arr = [3, 4, -1, 1]
 # arr = [-8, -7, -6]
 n = len(arr)
 # print(n, n+2)
@@ -24,7 +24,8 @@ def findmissingelement(arr):
         idx = ele -1
         if idx >= 0 and idx < n and arr[idx]>0:
             arr[idx] *= -1
-    print(arr)
+            print(arr)
+    # print(arr)
     # ans =
     for i in range(n):
         if arr[i] > 0:
