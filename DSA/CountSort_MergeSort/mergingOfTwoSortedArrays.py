@@ -9,9 +9,11 @@ Note: A linear time complexity is expected and you should avoid use of any libra
 # B = [2]
 # A = [-4,-3,0]
 # B = [2]
-A = [3]
-B = [-4,-3]
+# A = [3]
+# B = [-4,-3]
 
+A= [1, 4, 10]
+B= [2, 1, 5]
 def merge2Arrays(arr1, arr2):
     i, j =0, 0
     n, m = len(arr1), len(arr2)
@@ -20,16 +22,16 @@ def merge2Arrays(arr1, arr2):
     result = []
 
     while i< n and j < m:
-        # print(i, j)
+        print(i, j)
         if arr1[i] < arr2[j]:
             result.append(arr1[i])
             i +=1
         else:
             result.append(arr2[j])
             j +=1
-        # print('intermediate result:', result)
+        print('intermediate result:', result)
 
-    # print('comparison over:', i, j)
+    print('comparison over:', i, j)
     # if pointer i has not reached the end.
     while i < n:
         result.append(arr1[i])
