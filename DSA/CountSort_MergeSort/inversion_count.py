@@ -2,9 +2,6 @@
 Given an array of integers A. If i < j and A[i] > A[j], then the pair (i, j) is called an inversion of A. Find the total number of inversions of A modulo (109 + 7).
 
 '''
-
-
-
 def inversionCount(arr):
     inv_cnt =0
     if len(arr) > 1:
@@ -43,7 +40,6 @@ def inversionCount(arr):
         # print('sorted arr: ', arr)
     return inv_cnt
     
-
 
 # A = [1, 3, 2]
 # A = [3, 4, 1, 2]
