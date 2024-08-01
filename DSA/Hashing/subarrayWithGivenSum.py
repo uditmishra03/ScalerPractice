@@ -11,7 +11,7 @@ def SubarraySum(A, B):
 
     hash = defaultdict(int)
     hash[0]= -1
-    # print(hash)
+    print(hash)
 
     cur_sum =0
     start_idx, end_idx = -1, -1
@@ -24,7 +24,7 @@ def SubarraySum(A, B):
             end_idx = i
             break
         hash[cur_sum] =i
-        # print(hash)
+        print(hash)
 
     if start_idx == -1:
         return [-1]

@@ -6,9 +6,11 @@ Find the total number of subarrays having sum equals to B'''
 from collections import defaultdict
 
 
-A = [1, 0, 1]
-B = 1
+# A = [1, 0, 1]
+# B = 1
 
+A = [2, 3, 9 -4, 1, 5, 6, 2, 5]
+B = 11
 # A = [0, 0, 0]
 # B = 0
 
@@ -30,6 +32,7 @@ def subArraySumEqualsK(arr, k):
         if k == pfsum[i]:
             subarray_count +=1
         target = pfsum[i]-k
+        print(freq, target)
         if target in freq:
             subarray_count += freq[target]
 

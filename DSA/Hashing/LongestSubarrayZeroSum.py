@@ -1,4 +1,4 @@
-import sys
+
 from collections import defaultdict
 
 # A = [1, -2, 1, 2]
@@ -17,7 +17,8 @@ for i in range(n):
         max_len = i+1
     
     if cur_sum in freq:
-        max_len = max(max_len, i-freq[cur_sum])
+        max_len = max(max_len, i-freq[cur_sum])  # Getting the subarray length from the 
+                                                #previous prefix sum we found.
     else:
         freq[cur_sum]= i # storing the index of each sum as it value
 
