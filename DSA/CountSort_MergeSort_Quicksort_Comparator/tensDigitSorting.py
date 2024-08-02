@@ -13,7 +13,7 @@ def findTensDigit(num):
 def compare(n1, n2):
     t1 = findTensDigit(n1)
     t2 = findTensDigit(n2)
-    print(t1, t2)
+    # print(n1,t1, n2, t2)
     if t1 < t2:
         return -1
     elif t1>t2:

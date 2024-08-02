@@ -17,7 +17,7 @@ def countFactor(num):
 # print(countFactor(num))
 
 # A = [6, 8, 9]
-A = A = [2, 4, 7]
+A = [2, 4, 7]
 
 def compare(n1, n2):
     f1 = countFactor(n1)

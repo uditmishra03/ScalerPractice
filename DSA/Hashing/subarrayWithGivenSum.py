@@ -10,7 +10,8 @@ def SubarraySum(A, B):
     n = len(A)
 
     hash = defaultdict(int)
-    hash[0]= -1
+    hash[0]= -1          # this is to handle a situation where value of B is 
+                            #found at the very first position that is 0.
     print(hash)
 
     cur_sum =0

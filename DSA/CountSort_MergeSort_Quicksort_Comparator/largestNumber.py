@@ -11,6 +11,7 @@ A = [3,30,34,5,9]
 def compareNumbers(x, y):
     str1 = str(x)
     str2 = str(y)
+    print(str1+str2, str2+str1)
     if str1+str2 > str2+str1:
         return -1
     else:
