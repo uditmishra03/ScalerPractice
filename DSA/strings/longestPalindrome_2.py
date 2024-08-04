@@ -2,7 +2,9 @@
 # A = 'aaaabaaa'
 # A= 'abb'
 # A= 'abcbedrardea'
-A = 'hghjbaccabererq'
+# A = 'hghjbaccabererq'
+# A = 'banana'
+A ='dccbcdaac'
 n = len(A)
 
 if n == 0:

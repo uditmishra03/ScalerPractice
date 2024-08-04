@@ -3,7 +3,8 @@
 # A= 'abcbedrardea'
 # A = 'hghjbaccabererq'
 # A= ''
-A = "abba"
+# A = "abba"
+A ='dccbcdaac'
 
 n = len(A)
 if n == 0:

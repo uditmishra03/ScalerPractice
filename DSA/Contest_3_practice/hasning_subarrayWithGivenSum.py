@@ -1,5 +1,5 @@
 A = [1, 2, 3, 4, 5]
-B = 1
+B = 9
 
 
 from collections import defaultdict
