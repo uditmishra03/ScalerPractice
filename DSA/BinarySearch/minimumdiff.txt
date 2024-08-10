@@ -1,0 +1,15 @@
+from bisect import bisect_left class Solution:
+def solve(self, A, B, C):
+    for lst in C:
+        lst.sort()
+    ans = 1000009
+    for i in range(0, A - 1):
+        for j in range(0, B):
+        ele = C[i][j]
+        x = bisect_left(C[i + 1], ele)
+    if x != B:
+        ans = min(ans, C[i + 1][x] - ele)
+    if x == 0:
+        continue
+    ans = min(ans, ele - C[i + 1][x - 1])
+    return ans
