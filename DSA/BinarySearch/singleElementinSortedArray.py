@@ -7,7 +7,8 @@ NOTE: Users are expected to solve this in O(log(N)) time.'''
 
 
 # A = [1, 1, 7]
-A = [2, 3, 3]
+# A = [2, 3, 3]
+A = [3,	3,	1,	1,	8,	8,	10,	10,	19,	6,	6,	2,	2,	4,	4]
 
 
 def findSingleElement(arr):
