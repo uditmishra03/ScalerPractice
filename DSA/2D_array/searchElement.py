@@ -9,9 +9,9 @@ If B is not present return -1.'''
 #      [7, 8, 9]]
 # B = 2
 #
-# A = [[1, 2],
-#      [3, 3]]
-# B = 3
+A = [[1, 2],
+     [3, 3]]
+B = 3
 #
 # A=[[1,3,5,7],[2,4,6,8]]
 # B = 10
@@ -19,8 +19,8 @@ If B is not present return -1.'''
 # A = [[2,8,8,8],[2,8,8,8],[2,8,8,8]]
 # B = 8
 
-A = [[3,3,3],[3,3,3],[3,3,3]]
-B = 3
+# A = [[3,3,3],[3,3,3],[3,3,3]]
+# B = 3
 def searchAnElement(A,B):
     n = len(A)
     m = len(A[0])
@@ -28,7 +28,7 @@ def searchAnElement(A,B):
     min_i, min_j = n-1,m-1
     i, j=0,m-1
     while i < n and j >=0:
-        print(A[i][j])
+        # print(A[i][j])
         if A[i][j] == B:
             print('found it at position ',i+1,  j+1)
             min_i= min(min_i, i)
@@ -38,7 +38,7 @@ def searchAnElement(A,B):
                     min_j = min(min_j, k)
             # print('@line 37: ', min_j)
             ans = (min_i+1) * 1009+(min_j+1)
-            print(ans, min_i, min_j)
+            # print(ans, min_i, min_j)
             return ans
         elif A[i][j] > B:
             j-=1
