@@ -12,7 +12,7 @@ def countSort(A):
     for i in A:
         farr[i] +=1
     
-    # print(farr)
+    print(farr)
     ans = []
     for k in range(max_item+1):
         for i in range(1, farr[k]+1):
