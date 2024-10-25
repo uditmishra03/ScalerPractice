@@ -12,13 +12,13 @@ def mergeSort(arr):
         arr1 = arr[:mid]
         arr2 = arr[mid:]
 
-        print(f"subarr1: {arr1}, subarr2: {arr2}")
+        # print(f"subarr1: {arr1}, subarr2: {arr2}")
         mergeSort(arr1)
         mergeSort(arr2)
         
         i, j, k =0, 0, 0
         n, m = len(arr1), len(arr2)
-        print('size', n, m)
+        # print('size', n, m)
 
         while i< n and j < m:
             if arr1[i] < arr2[j]:
